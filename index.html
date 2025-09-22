@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Fluência 7 — Estude 7 palavras por dia</title>
+	<meta name="description" content="Infoproduto de inglês: memorize 7 palavras por dia com revisão espaçada e chegue à fluência de forma consistente." />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					fontFamily: { inter: ['Inter', 'ui-sans-serif', 'system-ui'] },
+					colors: {
+						primary: {
+							DEFAULT: '#ff6b35',
+							50: '#fff1eb', 100: '#ffe4d7', 200: '#ffc6ad', 300: '#ffa885', 400: '#ff895b', 500: '#ff6b35', 600: '#e35828', 700: '#bf4820', 800: '#9b3a1a', 900: '#7f3016'
+						},
+						accent: '#ffd23f'
+					}
+				}
+			}
+		}
+	</script>
+	<style>
+		body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+	</style>
+</head>
+<body class="bg-white text-slate-800">
+	<!-- Header -->
+	<header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex h-16 items-center justify-between">
+				<a href="#home" class="flex items-center gap-2 font-extrabold text-primary-600">
+					<span class="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary-600 text-white">7</span>
+					<span>Fluência 7</span>
+				</a>
+				<nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+					<a href="#beneficios" class="hover:text-primary-600 transition">Benefícios</a>
+					<a href="#como-funciona" class="hover:text-primary-600 transition">Como funciona</a>
+					<a href="#planos" class="hover:text-primary-600 transition">Planos</a>
+					<a href="#faq" class="hover:text-primary-600 transition">FAQ</a>
+					<a href="#contato" class="px-4 py-2 rounded-full bg-primary-600 text-white hover:bg-primary-700 transition">Começar</a>
+				</nav>
+				<button id="menuBtn" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-md border border-slate-300 text-slate-700">
+					<svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+			<div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3 text-sm font-medium">
+				<a href="#beneficios" class="py-2">Benefícios</a>
+				<a href="#como-funciona" class="py-2">Como funciona</a>
+				<a href="#planos" class="py-2">Planos</a>
+				<a href="#faq" class="py-2">FAQ</a>
+				<a href="#contato" class="py-2 px-4 rounded-full bg-primary-600 text-white w-max">Começar</a>
+			</div>
+		</div>
+	</header>
+
+	<!-- Hero -->
+	<section id="home" class="relative overflow-hidden">
+		<div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-500 via-purple-500 to-primary-500"></div>
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+			<div class="grid md:grid-cols-2 items-center gap-10">
+				<div class="text-white">
+					<h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+						Decore 7 palavras por dia<br class="hidden sm:block" /> e avance rumo à fluência
+					</h1>
+					<p class="mt-5 text-lg/7 text-white/90">
+						Método simples e comprovado com revisão espaçada, produção ativa e progresso semanal medível.
+					</p>
+					<div class="mt-8 flex flex-col sm:flex-row gap-3">
+						<a href="#planos" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white text-slate-900 font-semibold hover:opacity-90">Quero começar</a>
+						<a href="#como-funciona" class="inline-flex items-center justify-center px-6 py-3 rounded-full border border-white/70 text-white hover:bg-white/10">Ver como funciona</a>
+					</div>
+					<div class="mt-8 grid grid-cols-3 gap-4 text-center">
+						<div>
+							<div class="text-3xl font-extrabold">7</div>
+							<div class="text-white/80 text-sm">palavras/dia</div>
+						</div>
+						<div>
+							<div class="text-3xl font-extrabold">12</div>
+							<div class="text-white/80 text-sm">semanas</div>
+						</div>
+						<div>
+							<div class="text-3xl font-extrabold">588</div>
+							<div class="text-white/80 text-sm">palavras+</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="rounded-2xl bg-white/10 border border-white/20 p-6 text-white shadow-xl">
+						<h3 class="text-xl font-bold">O que você recebe</h3>
+						<ul class="mt-4 space-y-3 text-white/90">
+							<li class="flex items-center gap-3"><span class="h-2 w-2 rounded-full bg-accent"></span> Plano de 12 semanas</li>
+							<li class="flex items-center gap-3"><span class="h-2 w-2 rounded-full bg-accent"></span> Rotina diária de 20–30 min</li>
+							<li class="flex items-center gap-3"><span class="h-2 w-2 rounded-full bg-accent"></span> Listas semanais + flashcards</li>
+							<li class="flex items-center gap-3"><span class="h-2 w-2 rounded-full bg-accent"></span> Revisão espaçada pronta</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Benefícios -->
+	<section id="beneficios" class="py-20 bg-slate-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center max-w-2xl mx-auto">
+				<h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Benefícios que aceleram seu inglês</h2>
+				<p class="mt-3 text-slate-600">Foco em retenção, fala e consistência — você progride dia após dia.</p>
+			</div>
+			<div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+				<div class="rounded-xl border border-slate-200 bg-white p-6">
+					<h3 class="font-bold text-slate-900">Memória turbinada</h3>
+					<p class="mt-2 text-slate-600">Revisão espaçada em ciclos D+1, D+3, D+7 e D+14.</p>
+				</div>
+				<div class="rounded-xl border border-slate-200 bg-white p-6">
+					<h3 class="font-bold text-slate-900">Frases reais</h3>
+					<p class="mt-2 text-slate-600">Produção ativa de 3 frases próprias por dia.</p>
+				</div>
+				<div class="rounded-xl border border-slate-200 bg-white p-6">
+					<h3 class="font-bold text-slate-900">Tempo sob controle</h3>
+					<p class="mt-2 text-slate-600">Rotina de 20–30 minutos que cabe no seu dia.</p>
+				</div>
+				<div class="rounded-xl border border-slate-200 bg-white p-6">
+					<h3 class="font-bold text-slate-900">Progresso medível</h3>
+					<p class="mt-2 text-slate-600">Checklists e tracker para ver evolução toda semana.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Como funciona -->
+	<section id="como-funciona" class="py-20">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid lg:grid-cols-2 gap-10 items-start">
+				<div>
+					<h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Como funciona</h2>
+					<p class="mt-3 text-slate-600">Siga passos simples diariamente para resultado consistente.</p>
+					<ol class="mt-6 space-y-4">
+						<li class="flex gap-4">
+							<span class="h-8 w-8 flex items-center justify-center rounded-full bg-primary-600 text-white font-bold">1</span>
+							<div>
+								<p class="font-semibold text-slate-900">Aprenda 7 palavras</p>
+								<p class="text-slate-600">Exemplos claros + leitura em voz alta.</p>
+							</div>
+						</li>
+						<li class="flex gap-4">
+							<span class="h-8 w-8 flex items-center justify-center rounded-full bg-primary-600 text-white font-bold">2</span>
+							<div>
+								<p class="font-semibold text-slate-900">Produza 3 frases</p>
+								<p class="text-slate-600">Aplique as palavras em situações suas.</p>
+							</div>
+						</li>
+						<li class="flex gap-4">
+							<span class="h-8 w-8 flex items-center justify-center rounded-full bg-primary-600 text-white font-bold">3</span>
+							<div>
+								<p class="font-semibold text-slate-900">Revise no dia certo</p>
+								<p class="text-slate-600">Ciclos D+1, D+3, D+7 e D+14 para alta retenção.</p>
+							</div>
+						</li>
+					</ol>
+				</div>
+				<div class="rounded-2xl border border-slate-200 p-6 bg-gradient-to-br from-white to-slate-50">
+					<h3 class="text-xl font-bold text-slate-900">Rotina diária (20–30 min)</h3>
+					<ul class="mt-4 space-y-2 text-slate-700">
+						<li>1–2 min: preparar material e foco</li>
+						<li>10–12 min: aprender 7 palavras</li>
+						<li>5–7 min: escrever/ler 3 frases</li>
+						<li>5–8 min: revisões do dia</li>
+					</ul>
+					<p class="mt-4 text-slate-600 text-sm">Extra: 1 áudio de 60s/semana para consolidar fala.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Planos -->
+	<section id="planos" class="py-20 bg-slate-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center max-w-2xl mx-auto">
+				<h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Produto único</h2>
+				<p class="mt-3 text-slate-600">Pacote completo de palavras + modelos de flashcards + guia prático.</p>
+			</div>
+			<div class="mt-12 grid md:grid-cols-1 gap-6">
+				<div class="mx-auto w-full max-w-md rounded-2xl border-2 border-primary-600 bg-white p-6 shadow-sm flex flex-col">
+					<h3 class="font-bold text-slate-900">Fluência 7 — Pacote de Palavras</h3>
+					<p class="mt-1 text-slate-600 text-sm">Tudo o que você precisa para começar hoje</p>
+					<div class="mt-4 text-4xl font-extrabold">R$ 29,99</div>
+					<ul class="mt-4 space-y-2 text-slate-700 text-sm">
+						<li>Lista de palavras selecionadas</li>
+						<li>Modelos de flashcards (Anki/Quizlet/Planilha)</li>
+						<li>Guia de rotina diária (20–30 min)</li>
+						<li>Calendário de revisão espaçada</li>
+					</ul>
+					<a href="#contato" class="mt-6 inline-flex justify-center px-5 py-2.5 rounded-full bg-primary-600 text-white hover:bg-primary-700">Quero por R$ 29,99</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ -->
+	<section id="faq" class="py-20">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 text-center">Perguntas frequentes</h2>
+			<div class="mt-10 divide-y divide-slate-200 border border-slate-200 rounded-xl">
+				<details class="group p-5" open>
+					<summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-slate-900">
+						Funciona para iniciantes?
+						<span class="transition group-open:rotate-180">⌄</span>
+					</summary>
+					<p class="mt-3 text-slate-600">Sim. O método foi pensado para quem está começando e quer construir base sólida.</p>
+				</details>
+				<details class="group p-5">
+					<summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-slate-900">
+						Quanto tempo por dia?
+						<span class="transition group-open:rotate-180">⌄</span>
+					</summary>
+					<p class="mt-3 text-slate-600">Entre 20 e 30 minutos, incluindo revisões rápidas.</p>
+				</details>
+				<details class="group p-5">
+					<summary class="flex cursor-pointer list-none items-center justify-between font-semibold text-slate-900">
+						Preciso de apps pagos?
+						<span class="transition group-open:rotate-180">⌄</span>
+					</summary>
+					<p class="mt-3 text-slate-600">Não. Você pode usar planilhas ou apps gratuitos como Anki/Quizlet.</p>
+				</details>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contato -->
+	<section id="contato" class="py-20 bg-slate-50">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center max-w-2xl mx-auto">
+				<h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Fale com a gente</h2>
+				<p class="mt-3 text-slate-600">Envie uma mensagem e receba instruções para começar hoje.</p>
+			</div>
+			<form class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+				<div class="sm:col-span-1">
+					<label class="block text-sm font-medium text-slate-700">Nome completo</label>
+					<input type="text" required class="mt-1 w-full rounded-lg border-slate-300 focus:border-primary-600 focus:ring-primary-600" />
+				</div>
+				<div class="sm:col-span-1">
+					<label class="block text-sm font-medium text-slate-700">Email</label>
+					<input type="email" required class="mt-1 w-full rounded-lg border-slate-300 focus:border-primary-600 focus:ring-primary-600" />
+				</div>
+				<div class="sm:col-span-1">
+					<label class="block text-sm font-medium text-slate-700">Telefone</label>
+					<input type="tel" class="mt-1 w-full rounded-lg border-slate-300 focus:border-primary-600 focus:ring-primary-600" />
+				</div>
+				<div class="sm:col-span-1">
+					<label class="block text-sm font-medium text-slate-700">Plano de interesse</label>
+					<select class="mt-1 w-full rounded-lg border-slate-300 focus:border-primary-600 focus:ring-primary-600">
+						<option>Único — R$ 29,99</option>
+					</select>
+				</div>
+				<div class="sm:col-span-2">
+					<label class="block text-sm font-medium text-slate-700">Mensagem</label>
+					<textarea rows="4" class="mt-1 w-full rounded-lg border-slate-300 focus:border-primary-600 focus:ring-primary-600"></textarea>
+				</div>
+				<div class="sm:col-span-2">
+					<button type="submit" class="w-full inline-flex justify-center rounded-full bg-primary-600 px-6 py-3 font-semibold text-white hover:bg-primary-700">Enviar</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="py-8 border-t border-slate-200">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-600">
+			<p>© <span id="year"></span> Fluência 7. Todos os direitos reservados.</p>
+			<a href="#home" class="hover:text-primary-600">Voltar ao topo</a>
+		</div>
+	</footer>
+
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+		const menuBtn = document.getElementById('menuBtn');
+		const mobileMenu = document.getElementById('mobileMenu');
+		menuBtn.addEventListener('click', () => {
+			mobileMenu.classList.toggle('hidden');
+		});
+	</script>
+</body>
+</html>
+
+
