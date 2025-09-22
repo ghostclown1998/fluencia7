@@ -247,10 +247,10 @@
 					</summary>
 					<p class="mt-3 text-slate-600">Não. Você pode usar planilhas ou apps gratuitos como Anki/Quizlet.</p>
 					<div class="mt-4">
-						<a href="infoproduto/semanas/tutorial de como ler csv/tutorial-uso-csv.html" class="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-4 py-2 text-sm text-slate-700 hover:border-primary-600 hover:text-primary-700">
+						<button onclick="openTutorialModal()" class="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-4 py-2 text-sm text-slate-700 hover:border-primary-600 hover:text-primary-700">
 							<span>Teve problema para importar? Veja o tutorial completo</span>
 							<span class="text-primary-600">→</span>
-						</a>
+						</button>
 					</div>
 				</details>
 			</div>
@@ -301,6 +301,199 @@
 		</div>
 	</section>
 
+	<!-- Tutorial Modal -->
+	<div id="tutorialModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center p-4">
+		<div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+			<div class="sticky top-0 bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between">
+				<h2 class="text-2xl font-bold text-slate-900">📚 Tutorial: Como Usar os Arquivos CSV</h2>
+				<button onclick="closeTutorialModal()" class="text-slate-400 hover:text-slate-600 text-2xl">&times;</button>
+			</div>
+			<div class="p-6 space-y-8">
+				<!-- Introdução -->
+				<div class="text-center">
+					<h3 class="text-xl font-semibold text-slate-800 mb-2">🎯 Escolha Sua Plataforma de Estudo</h3>
+					<p class="text-slate-600">Aprenda a usar os arquivos CSV das 12 semanas de palavras em três plataformas diferentes.</p>
+				</div>
+
+				<!-- Cards das Plataformas -->
+				<div class="grid md:grid-cols-3 gap-6">
+					<div class="border border-blue-200 rounded-lg p-4 bg-blue-50">
+						<div class="text-center mb-4">
+							<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
+								<span class="text-2xl">🧠</span>
+							</div>
+							<h4 class="font-bold text-blue-800">ANKI</h4>
+							<p class="text-blue-600 text-sm">Para Memorização Eficiente</p>
+						</div>
+						<ul class="text-sm text-blue-700 space-y-1">
+							<li>✓ Repetição espaçada automática</li>
+							<li>✓ Gratuito e offline</li>
+							<li>✓ Muito eficiente</li>
+						</ul>
+					</div>
+					<div class="border border-purple-200 rounded-lg p-4 bg-purple-50">
+						<div class="text-center mb-4">
+							<div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2">
+								<span class="text-2xl">🎮</span>
+							</div>
+							<h4 class="font-bold text-purple-800">QUIZLET</h4>
+							<p class="text-purple-600 text-sm">Mais Visual e Interativo</p>
+						</div>
+						<ul class="text-sm text-purple-700 space-y-1">
+							<li>✓ Interface visual e divertida</li>
+							<li>✓ Vários modos de estudo</li>
+							<li>✓ Funciona no celular</li>
+						</ul>
+					</div>
+					<div class="border border-green-200 rounded-lg p-4 bg-green-50">
+						<div class="text-center mb-4">
+							<div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
+								<span class="text-2xl">📊</span>
+							</div>
+							<h4 class="font-bold text-green-800">GOOGLE SHEETS</h4>
+							<p class="text-green-600 text-sm">Mais Simples</p>
+						</div>
+						<ul class="text-sm text-green-700 space-y-1">
+							<li>✓ Muito simples de usar</li>
+							<li>✓ Gratuito e online</li>
+							<li>✓ Fácil de personalizar</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Tutorial Anki -->
+				<div class="bg-slate-50 rounded-lg p-6">
+					<h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+						<span>🧠</span>
+						<span>ANKI - Para Memorização Eficiente</span>
+					</h3>
+					<div class="space-y-4">
+						<div class="flex gap-3">
+							<span class="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
+							<div>
+								<h4 class="font-semibold text-slate-800">Baixar e Instalar</h4>
+								<p class="text-slate-600 text-sm">Acesse <a href="https://apps.ankiweb.net/" target="_blank" class="text-blue-600 hover:underline">apps.ankiweb.net</a> e baixe a versão para seu computador.</p>
+							</div>
+						</div>
+						<div class="flex gap-3">
+							<span class="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
+							<div>
+								<h4 class="font-semibold text-slate-800">Importar as Palavras</h4>
+								<p class="text-slate-600 text-sm">Abra o Anki → "Import File" → Escolha o arquivo semana1.csv → Configure as colunas: Front (word), Back (meaning_pt), Extra (exemplos).</p>
+							</div>
+						</div>
+						<div class="flex gap-3">
+							<span class="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
+							<div>
+								<h4 class="font-semibold text-slate-800">Estudar</h4>
+								<p class="text-slate-600 text-sm">Use os botões: Again (novamente), Good (bom), Easy (fácil). O sistema agenda revisões automaticamente.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tutorial Quizlet -->
+				<div class="bg-slate-50 rounded-lg p-6">
+					<h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+						<span>🎮</span>
+						<span>QUIZLET - Mais Visual e Interativo</span>
+					</h3>
+					<div class="space-y-4">
+						<div class="flex gap-3">
+							<span class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
+							<div>
+								<h4 class="font-semibold text-slate-800">Criar Conta</h4>
+								<p class="text-slate-600 text-sm">Acesse <a href="https://quizlet.com/" target="_blank" class="text-purple-600 hover:underline">quizlet.com</a> e crie sua conta gratuita.</p>
+							</div>
+						</div>
+						<div class="flex gap-3">
+							<span class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
+							<div>
+								<h4 class="font-semibold text-slate-800">Criar Conjunto de Estudo</h4>
+								<p class="text-slate-600 text-sm">Clique em "Create" → "Study set" → Nomeie "Fluência 7 - Semana 1".</p>
+							</div>
+						</div>
+						<div class="flex gap-3">
+							<span class="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
+							<div>
+								<h4 class="font-semibold text-slate-800">Importar e Estudar</h4>
+								<p class="text-slate-600 text-sm">Use "Import from Word, Excel..." → Cole o conteúdo do CSV → Configure Term (word) e Definition (meaning_pt). Use os modos: Flashcards, Learn, Write, Spell, Test, Match.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tutorial Google Sheets -->
+				<div class="bg-slate-50 rounded-lg p-6">
+					<h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+						<span>📊</span>
+						<span>GOOGLE SHEETS - Mais Simples</span>
+					</h3>
+					<div class="space-y-4">
+						<div class="flex gap-3">
+							<span class="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
+							<div>
+								<h4 class="font-semibold text-slate-800">Acessar Google Sheets</h4>
+								<p class="text-slate-600 text-sm">Acesse <a href="https://sheets.google.com/" target="_blank" class="text-green-600 hover:underline">sheets.google.com</a> e faça login com sua conta Google.</p>
+							</div>
+						</div>
+						<div class="flex gap-3">
+							<span class="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
+							<div>
+								<h4 class="font-semibold text-slate-800">Importar os Dados</h4>
+								<p class="text-slate-600 text-sm">File → Import → Upload → Selecione o arquivo semana1.csv → Configure separador como "Comma" → Import data.</p>
+							</div>
+						</div>
+						<div class="flex gap-3">
+							<span class="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
+							<div>
+								<h4 class="font-semibold text-slate-800">Estudar</h4>
+								<p class="text-slate-600 text-sm">Cubra a coluna F (significado) e tente lembrar, use a coluna D (pron_pt) para pronúncia, crie filtros para organizar.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Dicas Importantes -->
+				<div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+					<h3 class="text-lg font-bold text-yellow-800 mb-4 flex items-center gap-2">
+						<span>💡</span>
+						<span>Dicas Importantes</span>
+					</h3>
+					<ul class="text-yellow-700 space-y-2 text-sm">
+						<li>• Estude 7 palavras por dia (como no método)</li>
+						<li>• Use a coluna pron_pt para pronunciar corretamente</li>
+						<li>• Pratique os exemplos das colunas G e H</li>
+						<li>• Revise palavras antigas regularmente</li>
+						<li>• Mantenha consistência - melhor 20 min/dia</li>
+					</ul>
+				</div>
+
+				<!-- Problemas Comuns -->
+				<div class="bg-red-50 border border-red-200 rounded-lg p-6">
+					<h3 class="text-lg font-bold text-red-800 mb-4 flex items-center gap-2">
+						<span>🆘</span>
+						<span>Problemas Comuns e Soluções</span>
+					</h3>
+					<div class="space-y-3 text-sm">
+						<div>
+							<h4 class="font-semibold text-red-800">"Não consigo importar o arquivo"</h4>
+							<p class="text-red-700">Verifique se o arquivo está em formato CSV e se está usando vírgula como separador.</p>
+						</div>
+						<div>
+							<h4 class="font-semibold text-red-800">"As palavras não aparecem corretamente"</h4>
+							<p class="text-red-700">Verifique a codificação do arquivo (deve ser UTF-8). No Google Sheets, use "File" → "Import" em vez de "Open".</p>
+						</div>
+						<div>
+							<h4 class="font-semibold text-red-800">"Esqueci as palavras rapidamente"</h4>
+							<p class="text-red-700">Use a repetição espaçada (Anki é melhor para isso). Revise no mesmo dia, depois de 1 dia, 3 dias, 1 semana.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Footer -->
 	<footer class="py-8 border-t border-slate-200">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-600">
@@ -344,6 +537,31 @@
 			const numero = '5548996985310';
 			const url = `https://wa.me/${numero}?text=${texto}`;
 			window.open(url, '_blank');
+		});
+
+		// Funções do modal de tutorial
+		function openTutorialModal() {
+			document.getElementById('tutorialModal').classList.remove('hidden');
+			document.body.style.overflow = 'hidden';
+		}
+
+		function closeTutorialModal() {
+			document.getElementById('tutorialModal').classList.add('hidden');
+			document.body.style.overflow = 'auto';
+		}
+
+		// Fechar modal clicando fora dele
+		document.getElementById('tutorialModal').addEventListener('click', function(e) {
+			if (e.target === this) {
+				closeTutorialModal();
+			}
+		});
+
+		// Fechar modal com tecla ESC
+		document.addEventListener('keydown', function(e) {
+			if (e.key === 'Escape') {
+				closeTutorialModal();
+			}
 		});
 	</script>
 </body>
